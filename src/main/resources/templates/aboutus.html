@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>List des Consultation</title>
+ <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+<link rel="stylesheet" type=" text/css" th:href="@{/css/aboutus.css}"/>
+
+
+</head>
+
+
+   <body>
+   
+   <div class="btn">
+     <img  id="menubutton" src="./img/menu.png"/>
+       <img id="menulogo" src="./img/LogoProject.png"/>
+    </div>
+
+    <nav class="sidebar">
+        
+
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+
+
+
+            <li>
+                <a href="#" class="feat-btn">Transactions
+                    <span class="fas fa-caret-down first"></span>
+                </a>
+                <ul class="feat-show">
+                    <li><a href="#">Add Transaction</a></li>
+                </ul>
+            </li>
+
+
+
+            <li>
+                <a href="#" class="serv-btn">Categories
+                    <span class="fas fa-caret-down second"></span>
+                </a>
+                <ul class="serv-show">
+                    <li><a href="#">Add Category</a></li>
+
+                </ul>
+            </li>
+
+            <li><a href="#">About us</a></li>
+
+        </ul>
+    </nav>
+
+    <figure>
+        <img src="/img/contactus.jpg" alt="contact us" />
+    </figure>
+
+    <main class="container">
+        <div class="list">
+            <img src="/img/win_time.png" />
+            <h1>Win Time</h1>
+        </div>
+        <div  class="list">
+            <img src="/img/Organise.png" />
+            <h1>Organise savings</h1>
+        </div>
+        <div  class="list">
+            <img src="/img/save money.png" />
+            <h1>Save money</h1>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footerlist">
+            <img src="/img/LogoProject.png" />
+        </div>
+        <div class="footerlist">
+            <ul>
+                <li>Adresse: RUE HOME ALGER</li>
+                <li>Email: Nesserine.touadi0@gmail.com</li>
+                <li>Téléphone : 0560 xx xx xx</li>
+            </ul>
+        </div>
+        <div class="footerlist">
+            <ul>
+                <li> <a href="http://www.facebook.com"> Facebook </a> </li>
+                <li><a href="http://www.instagram.com"> Instagram </a> </li>
+                <li><a href="http://www.twitter.com"> Twitter </a> </li>
+            </ul>
+        </div>
+
+    </footer>
+    
+       <script>
+        $('.btn').click(function () {
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+        });
+        $('.feat-btn').click(function () {
+            $('nav ul .feat-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+        $('.serv-btn').click(function () {
+            $('nav ul .serv-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+        });
+        $('nav ul li').click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+</body>
+</html>
